@@ -44,7 +44,9 @@ HAVING COUNT(c2.store_id) > 300;
 
 #### ОТВЕТ:
 ```sql
-
+SELECT COUNT(f.title) 
+FROM film f
+WHERE f.`length` > (SELECT AVG(`length`) FROM film)
 ```
 ---
 ### Задание 3
